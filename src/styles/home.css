@@ -603,12 +603,10 @@
 }
 
 @media only screen and (max-width:768px) {
-    .highlightHome .post_entry {
+    .highlightHome .post_entry,
+    .readingH_item .row{
         flex-flow: column;
-    }
-
-    .readingH_item .row {
-        flex-flow: column;
+        width: 100%;
     }
 
     .home .outstanding {
