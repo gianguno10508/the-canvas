@@ -7,7 +7,7 @@ import ThaFlag from '../img/tha_flag.png';
 import { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { actSelectDarkMode } from "../actions";
-
+import $ from 'jquery';
 function Header(props) {
     const current = new Date();
     const date = `${current.getDate()}`;
@@ -74,7 +74,6 @@ function Header(props) {
                     callback();
                 }
             };
-
             document.addEventListener('click', handleItemClickDropdown);
 
             return () => {
@@ -161,13 +160,12 @@ function Header(props) {
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
     const handleSearchHeader = (event) => {
-        // console.log(event.target.value)
         const newShowSearch = [];
         if (event.target.value.length > 0) {
             props.datalifeStyle.filter((item) => {
-                // const valueInput = item.targets.value.toLowerCase();
+                const searchValue = event.target.value.toLowerCase();
                 const searchDataHeader = item.category.toLowerCase();
-                return searchDataHeader
+                return (searchValue && searchDataHeader.startsWith(searchValue) && searchDataHeader !== searchValue);
             }).map((item, i) => {
                 newShowSearch[i] = item;
             });
@@ -177,6 +175,14 @@ function Header(props) {
             setNewShowSearch([])
         }
     }
+    $(document).ready(function () {
+        var selector = '.navbar-nav li a';
+
+        $(selector).on('click', function () {
+            $(selector).removeClass('current');
+            $(this).addClass('current');
+        });
+    })
     return (
         <header className={`${bgDark} header sticky-top ${border}`}>
             <div className="container">
@@ -262,7 +268,7 @@ function Header(props) {
                             <div ref={refdrmenu} className={`justify-content-lg-center collapse navbar-collapse ${showMenu}`} id="navbarNav">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link to='/' className={`nav-link ${colorWhite}`} href="#"><div>Home</div></Link>
+                                        <Link to='/' className={`nav-link current ${colorWhite}`} href="#"><div ref={ref} id="my-element">Home</div></Link>
                                     </li>
                                     <li className="nav-item">
                                         <a className={`nav-link ${colorWhite}`} href="#"><div>World</div></a>
@@ -303,7 +309,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state)
     return {
         datalifeStyle: state.dataLifeStyle
     };
