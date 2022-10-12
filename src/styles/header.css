@@ -374,7 +374,10 @@ button:not(:disabled) {
     .header .menu #navbarNav ul li a:hover {
         color: #F39887;
     }
-
+    .header .menu #navbarNav ul li a:hover>div:after{
+        width: 10% !important;
+        left: 45% !important;
+    }
     .header .menu #navbarNav ul li a.current>div::after {
         width: 10% !important;
         left: 45% !important;
