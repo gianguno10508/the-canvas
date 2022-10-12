@@ -11,13 +11,14 @@ import { connect } from 'react-redux';
 import PostEndHome from './in-home/postEndHome';
 import OutsandingHome from './in-home/outsanding_home';
 import SpotLight from './in-home/spotlight';
-import BasedOn from './in-home/basedOn/basedOn'
+import BasedOn from './in-home/basedOn/basedOn';
+import data from './datalifestyle';
 import BannerHome from './in-home/bannerHome';
 function Home(props) {
     console.log(props);
     const [bgDarkHome, setbgDarkHome] = useState(null);
     useEffect(() => {
-
+        props.dispatchLifeStyle(data);
         if (props.darkmode == 'active dark mode') {
             setbgDarkHome('bg-dark-mode-home');
         } else {
@@ -45,6 +46,13 @@ function Home(props) {
         </div>
     );
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatchLifeStyle:(data)=>{
+            dispatch(actLifeStyle(data))
+        }
+    };
+};
 const mapStateToProps = (state, ownProps) => {
     // console.log(state);
     return {
