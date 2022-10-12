@@ -165,9 +165,10 @@ button:not(:disabled) {
 }
 
 .header .header-misc .top-search {
-    margin: 0 8px;
-    position: relative;
+    margin-left: 11px;
+    margin-right: 18px;
     padding-top: 4px;
+    position: relative;
 }
 
 .header .header-misc .top-search .search-box {
@@ -190,9 +191,10 @@ button:not(:disabled) {
 
 .header .header-misc .dark-mode .white-icon,
 .header .header-misc .dark-mode .dark-icon {
-    position: absolute;
+    /* position: absolute; */
     top: -10px;
     left: 14px;
+    margin-top: 2px;
 }
 
 .header .header-misc .top-search i,
@@ -357,7 +359,7 @@ button:not(:disabled) {
 
 
     .header .menu {
-        margin-top: 30px;
+        margin-top: 15px;
         padding: 5px 0;
     }
 
@@ -374,7 +376,10 @@ button:not(:disabled) {
     .header .menu #navbarNav ul li a:hover {
         color: #F39887;
     }
-
+    .header .menu #navbarNav ul li a:hover>div:after{
+        width: 10% !important;
+        left: 45% !important;
+    }
     .header .menu #navbarNav ul li a.current>div::after {
         width: 10% !important;
         left: 45% !important;
@@ -391,6 +396,9 @@ button:not(:disabled) {
 }
 
 @media only screen and (max-width:576px) {
+    .header .menu{
+        margin-top: 0px;
+    }
     .header-row {
         flex-flow: column;
     }

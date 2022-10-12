@@ -108,11 +108,11 @@ function Header(props) {
 
         return ref;
     };
-    const [searchText, setSearchText] = useState(null);
+    //const [searchText, setSearchText] = useState(null);
     const handleClickOutside = () => {
         setShowSearch('disnone');
         setNewShowSearch([]);
-        setSearchText(null);
+        //setSearchText(null);
     };
     const [showSearch, setShowSearch] = useState('disnone');
     const handleItemClickSearch = (event) => {
@@ -156,7 +156,6 @@ function Header(props) {
     };
     const handleClickOutsideMenu = () => {
         setShowMenu('disnone');
-
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
     const handleSearchHeader = (event) => {
@@ -170,7 +169,7 @@ function Header(props) {
                 newShowSearch[i] = item;
             });
             setNewShowSearch(newShowSearch);
-            setSearchText('done')
+            // setSearchText('done')
         } else {
             setNewShowSearch([])
         }
@@ -224,8 +223,7 @@ function Header(props) {
                         <div className={`top-search ${colorWhite}`} >
                             <i className="fa-solid fa-magnifying-glass" onClick={handleItemClickSearch}></i>
                             <div ref={ref} className={`search-box ${showSearch}`}>
-                                {searchText == 'done' ?
-                                    <input type='text' placeholder="Search here..." onChange={handleSearchHeader} /> : <input type='text' placeholder="Search here..." value="" onChange={handleSearchHeader} />}
+                                <input type='text' placeholder="Search here..." onChange={handleSearchHeader} />
                                 <div className="box_result">
                                     {showNewSearch.length > 0 ?
                                         showNewSearch.map((item, i) => (

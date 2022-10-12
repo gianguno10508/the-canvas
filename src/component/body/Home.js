@@ -34,18 +34,13 @@ function Home(props) {
                     <OutsandingHome />
                     <HighLightHome />
                 </div>
-                <AnimationOnScroll initiallyVisible={true} duration={2} animateIn="animate__swing">
-                    <NewLetter />
-                </AnimationOnScroll>
-                
+                <NewLetter />
                 <AnimationOnScroll animateIn="animate__bounceIn">
                     <LatesVideo />
                 </AnimationOnScroll>
             </div>
             <SpotLight bgDarkHome={bgDarkHome} />
-            <AnimationOnScroll animateIn="animate__tada">
-                <BasedOn bgDarkHome={bgDarkHome} />
-            </AnimationOnScroll>
+            <BasedOn bgDarkHome={bgDarkHome} />
             <BannerHome bgDarkHome={bgDarkHome} />
             <PostEndHome bgDarkHome={bgDarkHome} />
         </div>

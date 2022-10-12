@@ -411,3 +411,8 @@
         color: #444 !important;
     }
 }
+@media only screen and (max-width:768px){
+    .lifestyle-sub .col-lg-6 .form-control{
+        
+    }
+}
