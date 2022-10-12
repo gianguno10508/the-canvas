@@ -1,0 +1,339 @@
+body {
+    font-family: 'Domine', serif;
+}
+
+.disnone {
+    display: none !important;
+}
+
+.disblock {
+    display: block !important;
+}
+
+.bg-dark-mode {
+    background-color: #111 !important;
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    color: #666;
+}
+
+.b-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.header {
+    background: #fff;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+
+/* a little fix responsive */
+.header .header-row {
+    padding-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*  */
+.header .social-icon.si-mini {
+    width: 28px;
+    height: 28px;
+    font-size: .75rem;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.header .si-dark {
+    background-color: #444;
+    color: #fff !important;
+    border-color: transparent;
+}
+
+.header .si-rounded {
+    border-radius: 50%;
+}
+
+.header .social-icon {
+    margin: 0 5px 5px 0;
+    text-shadow: none;
+    /* border: 1px solid #aaa; */
+    overflow: hidden;
+    text-align: center !important;
+    float: left;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.header .social-icon i {
+    display: block;
+    position: relative;
+}
+
+.header .social-icon i:first-child {
+    top: 27%;
+    transition: all .3s ease;
+}
+
+.header .social-icon i:last-child {
+    color: #fff !important;
+    bottom: -20px;
+    transition: all .3s ease;
+}
+
+.header .si-facebook:hover {
+    background-color: #3b5998 !important;
+}
+
+.header .si-insta:hover {
+    background-color: #8a3ab9 !important;
+}
+
+.header .si-twitter:hover {
+    background-color: #00acee !important;
+}
+
+.header .si-facebook:hover i:first-child,
+.header .si-twitter:hover i:first-child,
+.header .si-insta:hover i:first-child {
+    top: -27px;
+    transition: all .3s ease;
+}
+
+.header .si-facebook:hover i:last-child,
+.header .si-twitter:hover i:last-child,
+.header .si-insta:hover i:last-child {
+    bottom: 5px;
+    transition: all .3s ease;
+}
+
+.header a.standard-logo {
+    font-size: 40px;
+    color: #000;
+    font-weight: 300;
+    font-family: 'Segoe UI';
+}
+
+.header a.standard-logo span.logo-name {
+    font-weight: 700;
+}
+
+.header .logo .date-today {
+    position: relative;
+    margin-top: -1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0px auto;
+    color: #e5e5e5;
+    width: 70%;
+}
+
+.header .date-today .today-text {
+    color: #777;
+    font-size: .875rem !important;
+    line-height: 1.3;
+}
+
+.header .date-today::after,
+.header .date-today::before {
+    content: '';
+    flex-grow: 1;
+    max-width: 100%;
+    background-color: transparent;
+    height: 0;
+    border-top: 4px double #ddd;
+}
+
+.header .header-misc img {
+    margin-right: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+.header .header-misc .top-search {
+    margin: 0 8px;
+    position: relative;
+}
+
+.header .header-misc .top-search .search-box {
+    position: absolute;
+    display: block;
+    left: -175px;
+    top: 35px;
+    transition: all .3s ease;
+}
+
+.header .header-misc .top-search .search-box input[type="text"] {
+    width: 300px;
+    padding: 5px 20px;
+    background-color: transparent;
+}
+
+.header .header-misc .dark-mode {
+    position: relative;
+}
+
+.header .header-misc .dark-mode .white-icon,
+.header .header-misc .dark-mode .dark-icon {
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.header .header-misc .top-search i,
+.header .header-misc .dark-mode i {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header .menu #navbarNav ul li {
+    padding-right: 50px;
+}
+
+.header .menu #navbarNav ul li a {
+    color: #222;
+}
+
+.header .menu #navbarNav ul li a>div {
+    position: relative;
+}
+
+
+.header .menu #navbarNav ul li a>div::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #F39887;
+    transition: all .3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.header .menu #navbarNav ul li a:hover>div::after {
+    width: 100%;
+}
+
+.header .menu {
+    margin-top: 50px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+
+.bg-dark-mode .menu {
+    border-color: rgba(255, 255, 255, .15) !important;
+}
+
+.bg-dark-mode.header.sticky-top.b-bottom {
+    border-bottom-color: rgba(255, 255, 255, .15) !important;
+}
+
+.bg-dark-mode .menu #navbarNav ul li a>div::after {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bg-dark-mode .footer .widget>h4 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)) !important;
+}
+
+.bg-dark-mode .widget.widget_links .tagcloud a {
+    border-color: rgba(255, 255, 255, .15) !important;
+}
+
+.bg-dark-mode .widget.widget_links .tagcloud a:hover {
+    border-color: #F39887 !important;
+}
+
+.search-box {
+    z-index: 100;
+    background-color: rgb(241, 241, 241);
+    /* border: 1px solid #444; */
+}
+
+.show_result_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: #222;
+    z-index: 100;
+}
+
+/* .show_result_search .color-underline{
+    background-image: linear-gradient(rgba(243, 152, 135, 0.3), rgba(243, 152, 135, 0.3));
+    background-repeat: no-repeat;
+    background-size: 0 8px;
+    background-position: 0 82%;
+    padding: 0 2px 2px 0;
+    transition: background .6s cubic-bezier(.19, 1, .22, 1);
+} */
+.show_result_search:hover .color-underline {
+    background-image: #F39887;
+}
+
+.show_result_search:hover {
+    color: rgba(43, 43, 43, 0.596);
+    background-color: rgb(212, 212, 212);
+}
+
+.show_result_search .img_show_result_search img {
+    width: 100%;
+    height: 100%;
+}
+
+.text_show_result_search h4 {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 152px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 40px;
+    line-height: 50px;
+}
+
+.text_show_result_search p {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width:992px) {
+    .header .menu #navbarNav ul li a {
+        text-transform: uppercase;
+    }
+
+    .header .menu #navbarNav ul li a:hover {
+        color: #F39887;
+    }
+
+    .header .menu #navbarNav ul li a:hover>div::after {
+        width: 10%;
+
+    }
+
+    .header .menu #navbarNav ul li a>div::after {
+        top: 100%;
+        left: 45%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .header-row {
+        flex-flow: column;
+    }
+}
