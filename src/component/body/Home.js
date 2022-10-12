@@ -34,13 +34,18 @@ function Home(props) {
                     <OutsandingHome />
                     <HighLightHome />
                 </div>
-                <NewLetter />
+                <AnimationOnScroll initiallyVisible={true} duration={2} animateIn="animate__swing">
+                    <NewLetter />
+                </AnimationOnScroll>
+                
                 <AnimationOnScroll animateIn="animate__bounceIn">
                     <LatesVideo />
                 </AnimationOnScroll>
             </div>
             <SpotLight bgDarkHome={bgDarkHome} />
-            <BasedOn bgDarkHome={bgDarkHome} />
+            <AnimationOnScroll animateIn="animate__tada">
+                <BasedOn bgDarkHome={bgDarkHome} />
+            </AnimationOnScroll>
             <BannerHome bgDarkHome={bgDarkHome} />
             <PostEndHome bgDarkHome={bgDarkHome} />
         </div>
@@ -54,7 +59,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state);
     return {
         darkmode: state.darkmode
     };

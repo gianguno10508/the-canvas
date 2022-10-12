@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { actLifeStyle } from '../../actions';
 const allCategories = ["all", ...new Set(data.map((p) => p.category))];
 function Lifestyle(props) {
-    // console.log(props.datalifestyle);
     // +++DArKMODE++
     const [bgDarkLifeStyle, setbgDarkLifeStyle] = useState(null);
     const [bgLessDarkLifeStyle, setbgLessDarkLifeStyle] = useState(null);
@@ -88,7 +87,6 @@ function Lifestyle(props) {
         if(event.target.value.length > 0){
             data.filter((item) => {
                 const searchValue = event.target.value.toLowerCase();
-                console.log(searchValue)
                 const searchData = item.name.toLowerCase();
                 return (searchValue && searchData.startsWith(searchValue) && searchData !== searchValue);
                     
@@ -102,7 +100,6 @@ function Lifestyle(props) {
     }
     const onSearch = (e,searchTerm) => {
         setsearchItem(searchTerm);
-        console.log(searchTerm);
     }
 
     useEffect(()=>{
@@ -253,7 +250,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state);
     return {
         darkmode: state.darkmode,
         

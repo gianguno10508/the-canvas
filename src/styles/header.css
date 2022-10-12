@@ -212,8 +212,16 @@ button:not(:disabled) {
 .header .menu #navbarNav ul li a>div {
     position: relative;
 }
-
-
+.header .menu #navbarNav ul li a.current>div::after{
+    content: " ";
+    width: 100% !important;
+    height: 4px;
+    background-color: #F39887;
+    transition: all .3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
 .header .menu #navbarNav ul li a>div::after {
     content: " ";
     width: 0%;
