@@ -18,6 +18,7 @@
 
 .home .post_entry_img img {
     margin-top: 0;
+    border-radius: 3px;
 }
 
 .home a {
@@ -28,9 +29,21 @@
     margin-top: 25px;
 }
 
+.home .outstanding .post-entry-content {
+    font-family: 'Roboto', sans-serif;
+}
+
+.home .outstanding .post-entry-content p {
+    color: rgba(255, 255, 255, .7)
+}
+
 /*  */
 .highlightHome {
     padding: 0 30px;
+}
+
+.highlightHome h4 {
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .highlightHome .col-12:last-child {
@@ -50,6 +63,7 @@
 
 .highlightHome .posts-md:last-child {
     border-bottom: 1px solid transparent;
+    margin-left: 10px;
 }
 
 /* .highlightHome .post_entry .post_entry_img {
@@ -70,7 +84,7 @@
 .newletter {
     margin: 60px 0px;
     padding: 60px 24px;
-    background-color: #f3978777;
+    background-color: #ffeae6;
 }
 
 .newletter .row {
@@ -103,7 +117,7 @@
 
 .newletter input {
     padding: 9px 26px;
-
+    border: 1px solid #ced4da;
 }
 
 /*  */
@@ -113,8 +127,17 @@
     margin-bottom: 1.5rem;
 }
 
+.lastes_title button i {
+    font-size: 13px;
+    margin-left: 3px;
+}
+
 .lastes_item .post_entry_img {
     position: relative;
+}
+
+.lastes_item .post_entry_title {
+    margin-top: 14px;
 }
 
 .lastes_item .post_entry_img .play-icon {
@@ -173,7 +196,7 @@
 }
 
 .readingH_item {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .readingH_item .row {
@@ -232,7 +255,7 @@
     left: 0;
     font-size: 26px;
     font-weight: 700;
-    font-family: var(--font-serif, 'Literata', serif);
+    font-family: 'Literata', serif;
 }
 
 .weeks-item .post-entry-title h4 a {
@@ -261,6 +284,10 @@
     text-align: center;
     max-width: 970px;
     margin: 0 auto;
+}
+
+.ad-bannerHome small {
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .ad-bannerHome img {
@@ -449,6 +476,7 @@
 
 .spotlight #sl {
     font-size: 30px;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .bg-dark-mode-home .spotlight #sl {
@@ -487,6 +515,7 @@
 
 .theWeek #rhh4 {
     font-size: 24px !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .bg-dark-mode-home .theWeek #rhh4 {
