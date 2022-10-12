@@ -94,11 +94,11 @@ function PostEndHome({ bgDarkHome }) {
                         <div className='row mb-0'>
                             {item.content.map((ite, ind) => (
                                 <div className='item-post-home col-12' key={ind}>
-                                    <div class="grid-inner">
-                                        <div class="item-post-home-title">
-                                            <h3><a href="#" class="color-underline">{ite.title}</a></h3>
+                                    <div className="grid-inner">
+                                        <div className="item-post-home-title">
+                                            <h3><a href="#" className="color-underline">{ite.title}</a></h3>
                                         </div>
-                                        <div class="item-post-home-date">
+                                        <div className="item-post-home-date">
                                             <ul>
                                                 <li><a href="#">{ite.date}</a></li>
                                             </ul>
@@ -108,7 +108,7 @@ function PostEndHome({ bgDarkHome }) {
                             ))}
 
                         </div>
-                        <a href="#" class="more-link-post-home">View more<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" className="more-link-post-home">View more<i className="fa-solid fa-arrow-right"></i></a>
                     </div>
                 ))}
 

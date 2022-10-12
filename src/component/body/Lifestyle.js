@@ -70,7 +70,7 @@ function Lifestyle(props) {
     const [menuItems, setMenuItems] = useState(data);
     const [categories, setCategories] = useState(allCategories);
 
-    const filterItems = (e,category) => {
+    const filterItems = (e, category) => {
         e.preventDefault();
         if (category === "all") {
             return setMenuItems(data);
@@ -84,28 +84,28 @@ function Lifestyle(props) {
     const onChange = (event) => {
         // setsearchItem(event.target.value);
         const newItems = [];
-        if(event.target.value.length > 0){
+        if (event.target.value.length > 0) {
             data.filter((item) => {
                 const searchValue = event.target.value.toLowerCase();
                 const searchData = item.name.toLowerCase();
                 return (searchValue && searchData.startsWith(searchValue) && searchData !== searchValue);
-                    
-            }).map((item,index)=>{
+
+            }).map((item, index) => {
                 newItems[index] = item;
-                });
+            });
             setMenuItems(newItems);
-        }else{
+        } else {
             setMenuItems(data);
         }
     }
-    const onSearch = (e,searchTerm) => {
+    const onSearch = (e, searchTerm) => {
         setsearchItem(searchTerm);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         props.dispatchLifeStyle(data);
-    },[])
-    
+    }, [])
+
     return (
         <div className={`${bgDarkLifeStyle} lifestyle-list `}>
             {/* +++FISTtitle++ */}
@@ -130,7 +130,7 @@ function Lifestyle(props) {
                                     <div className="lifestyle-widget-search">
                                         <form className={`input-group ${bgDarkLifeStyle}`}>
                                             <input className={`form-control ${bgDarkLifeStyle}`} type="search" placeholder="Search" aria-label="Search"
-                                            onChange={onChange}
+                                                onChange={onChange}
                                             />
                                         </form>
                                     </div>
@@ -138,7 +138,7 @@ function Lifestyle(props) {
                                         <ul className="nav">
                                             {categories.map((cate, index) => (
                                                 <li className="nav-item " key={index}>
-                                                    <a className={`nav-link ${bgDarkLifeStyle}`} href="#" onClick={(e) => filterItems(e,cate)}>{cate}</a>
+                                                    <a className={`nav-link ${bgDarkLifeStyle}`} href="#" onClick={(e) => filterItems(e, cate)}>{cate}</a>
                                                 </li>
                                             ))}
 
@@ -184,47 +184,47 @@ function Lifestyle(props) {
                                     </div>
                                 </div>
                                 <div className='row col-mb-50 posts-md'>
-                                    {menuItems.length > 0 ? 
-                                    menuItems.map((item) => (
-                                        <div className='col-md-4' key={item.id}>
-                                            <div className='lifestyle-item'>
-                                                <Link to='/detail'><img src={item.img} alt='' className='img-lifestyle'></img></Link>
-                                                <div className='lifestyle-item-title '>
-                                                    <Link to='/detail' className={`lifestyle-item-category ${cateDarkLifeStyle}`}>{item.category}</Link>
-                                                    <h3><Link to='/detail' className={`color-underline stretched-link ${colorWhiteLifeStyle}`}>
-                                                        {item.name}
-                                                    </Link></h3>
-                                                </div>
-                                                <div className="lifestyle-item-meta">
-                                                    <ul>
-                                                        <li className={`${colorLessWhiteLifeStyle}`}>{item.date}</li>
-                                                    </ul>
-                                                </div>
-                                                <div className="lifestyle-item-content mt-3">
-                                                    <p className={`${colorLessWhiteLifeStyle}`}>{item.content}</p>
-                                                    <Link to='/detail' className={`more-link ${colorWhiteLifeStyle}`}>{item.link}</Link>
+                                    {menuItems.length > 0 ?
+                                        menuItems.map((item) => (
+                                            <div className='col-md-4' key={item.id}>
+                                                <div className='lifestyle-item'>
+                                                    <Link to='/detail'><img src={item.img} alt='' className='img-lifestyle'></img></Link>
+                                                    <div className='lifestyle-item-title '>
+                                                        <Link to='/detail' className={`lifestyle-item-category ${cateDarkLifeStyle}`}>{item.category}</Link>
+                                                        <h3><Link to='/detail' className={`color-underline stretched-link ${colorWhiteLifeStyle}`}>
+                                                            {item.name}
+                                                        </Link></h3>
+                                                    </div>
+                                                    <div className="lifestyle-item-meta">
+                                                        <ul>
+                                                            <li className={`${colorLessWhiteLifeStyle}`}>{item.date}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="lifestyle-item-content mt-3">
+                                                        <p className={`${colorLessWhiteLifeStyle}`}>{item.content}</p>
+                                                        <Link to='/detail' className={`more-link ${colorWhiteLifeStyle}`}>{item.link}</Link>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    )) : 
-                                    <h4>Sorry, We don't have your search blog</h4>}
+                                        )) :
+                                        <h4>Sorry, We don't have your search blog</h4>}
                                 </div>
                             </div>
                         </div>
                         {/* +++LIST++ */}
                         {/* +++SUB++ */}
                         <div className="lifestyle-sub" >
-                            <div class={`section-sub section-colored-sub rounded mb-0 px-4 ${bgLessDarkLifeStyle}`}>
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col-lg-5">
-                                        <h3 class={`mb-4 mb-lg-0 ${colorWhiteLifeStyle}`}>Sign up for Updates &amp; Newsletters.</h3>
+                            <div className={`section-sub section-colored-sub rounded mb-0 px-4 ${bgLessDarkLifeStyle}`}>
+                                <div className="row justify-content-center align-items-center">
+                                    <div className="col-lg-5">
+                                        <h3 className={`mb-4 mb-lg-0 ${colorWhiteLifeStyle}`}>Sign up for Updates &amp; Newsletters.</h3>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="widget subscribe-widget" data-loader="button">
-                                            <div class="widget-subscribe-form-result"></div>
-                                            <form id="widget-subscribe-form" action="" method="post" class="mb-0 d-flex" noValidate="novalidate">
-                                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control" placeholder="Your Email Address" ></input>
-                                                <button class="button button-large button-black button-dark fw-medium ls0 button-rounded m-0 ms-3" type="submit">Subscribe Now</button>
+                                    <div className="col-lg-6">
+                                        <div className="widget subscribe-widget" data-loader="button">
+                                            <div className="widget-subscribe-form-result"></div>
+                                            <form id="widget-subscribe-form" action="" method="post" className="mb-0 d-flex" noValidate="novalidate">
+                                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" className="form-control" placeholder="Your Email Address" ></input>
+                                                <button className="button button-large button-black button-dark fw-medium ls0 button-rounded m-0 ms-3" type="submit">Subscribe Now</button>
                                             </form>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@ function Lifestyle(props) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        dispatchLifeStyle:(data)=>{
+        dispatchLifeStyle: (data) => {
             dispatch(actLifeStyle(data))
         }
     };
@@ -252,7 +252,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state, ownProps) => {
     return {
         darkmode: state.darkmode,
-        
+
     };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Lifestyle);
+export default connect(mapStateToProps, mapDispatchToProps)(Lifestyle);
