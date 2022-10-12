@@ -156,7 +156,6 @@ function Header(props) {
     };
     const handleClickOutsideMenu = () => {
         setShowMenu('disnone');
-
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
     const handleSearchHeader = (event) => {
