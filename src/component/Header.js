@@ -108,11 +108,11 @@ function Header(props) {
 
         return ref;
     };
-    const [searchText, setSearchText] = useState(null);
+    //const [searchText, setSearchText] = useState(null);
     const handleClickOutside = () => {
         setShowSearch('disnone');
         setNewShowSearch([]);
-        setSearchText(null);
+        //setSearchText(null);
     };
     const [showSearch, setShowSearch] = useState('disnone');
     const handleItemClickSearch = (event) => {
@@ -170,7 +170,7 @@ function Header(props) {
                 newShowSearch[i] = item;
             });
             setNewShowSearch(newShowSearch);
-            setSearchText('done')
+            // setSearchText('done')
         } else {
             setNewShowSearch([])
         }
