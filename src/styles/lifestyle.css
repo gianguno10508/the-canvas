@@ -374,7 +374,7 @@
     }
 
     .lifestyle-content-list .col-3 {
-        position: absolute;
+        /* position: absolute; */
         background-color: #f9f9f9;
         z-index: 5;
         width: 100%;
