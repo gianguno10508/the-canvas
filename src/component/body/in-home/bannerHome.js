@@ -6,7 +6,6 @@ function BannerHome({ bgDarkHome }) {
     return (
         <div className={`${bgDarkHome} bannerHome`}>
             <div className='container'>
-                <AnimationOnScroll initiallyVisible={true} delay={500} animateIn="animate__wobble">
                     <div className='row ad-bannerHome'>
                         <small className='mb-2 d-block'>Advertisement</small>
                         <div className="col-12">
@@ -15,7 +14,6 @@ function BannerHome({ bgDarkHome }) {
                             </a>
                         </div>
                     </div>
-                </AnimationOnScroll>
             </div>
         </div>
     )
