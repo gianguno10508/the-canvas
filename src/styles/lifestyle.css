@@ -388,7 +388,9 @@
     .lifestyle-content-list .lifestyle-widget-nav {
         margin-bottom: 30px;
     }
-
+    .sticky-top-cate{
+        position: unset;
+    }
     .lifestyle-widget-nav .nav {
         flex-direction: row;
         gap: 10px;
