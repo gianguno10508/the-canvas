@@ -167,6 +167,7 @@ button:not(:disabled) {
 .header .header-misc .top-search {
     margin: 0 8px;
     position: relative;
+    padding: 4px;
 }
 
 .header .header-misc .top-search .search-box {
@@ -191,7 +192,7 @@ button:not(:disabled) {
 .header .header-misc .dark-mode .dark-icon {
     position: absolute;
     top: -10px;
-    left: 0;
+    left: 14px;
 }
 
 .header .header-misc .top-search i,

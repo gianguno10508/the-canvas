@@ -389,7 +389,7 @@
         margin-bottom: 30px;
     }
     .sticky-top-cate{
-        position: unset;
+        position: unset !important;
     }
     .lifestyle-widget-nav .nav {
         flex-direction: row;

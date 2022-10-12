@@ -109,10 +109,11 @@ function Header(props) {
 
         return ref;
     };
+    const[searchText, setSearchText] = useState(null);
     const handleClickOutside = () => {
         setShowSearch('disnone');
         setNewShowSearch([]);
-        console.log("tét")
+        setSearchText(null);
     };
     const [showSearch, setShowSearch] = useState('disnone');
     const handleItemClickSearch = (event) => {
@@ -159,10 +160,6 @@ function Header(props) {
         
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
-
-    console.log(props.datalifeStyle)
-    
-
     const handleSearchHeader=(event)=>{
         // console.log(event.target.value)
         const newShowSearch=[];
@@ -170,12 +167,12 @@ function Header(props) {
             props.datalifeStyle.filter((item) => {
                 // const valueInput = item.targets.value.toLowerCase();
                 const searchDataHeader = item.category.toLowerCase();
-                console.log(searchDataHeader)
                 return searchDataHeader 
             }).map((item,i)=>{
                 newShowSearch[i] = item;
             });
             setNewShowSearch(newShowSearch);
+            setSearchText('done')
         }else{
             setNewShowSearch([])
         }
@@ -221,7 +218,8 @@ function Header(props) {
                         <div className={`top-search ${colorWhite}`} >
                             <i className="fa-solid fa-magnifying-glass" onClick={handleItemClickSearch}></i>
                             <div ref={ref} className={`search-box ${showSearch}`}>
-                                <input type='text' placeholder="Search here..."  onChange={handleSearchHeader}/>
+                                {searchText == 'done' ? 
+                                <input type='text' placeholder="Search here..."  onChange={handleSearchHeader}/> : <input type='text' placeholder="Search here..." value=""  onChange={handleSearchHeader}/>}
                                 <div className="box_result">
                                     {showNewSearch.length > 0 ?
                                         showNewSearch.map((item,i)=>(

@@ -14,8 +14,8 @@ import SpotLight from './in-home/spotlight';
 import BasedOn from './in-home/basedOn/basedOn';
 import data from './datalifestyle';
 import BannerHome from './in-home/bannerHome';
+import { actLifeStyle } from '../../actions';
 function Home(props) {
-    console.log(props);
     const [bgDarkHome, setbgDarkHome] = useState(null);
     useEffect(() => {
         props.dispatchLifeStyle(data);
@@ -59,4 +59,4 @@ const mapStateToProps = (state, ownProps) => {
         darkmode: state.darkmode
     };
 }
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
