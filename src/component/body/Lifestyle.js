@@ -137,7 +137,7 @@ function Lifestyle(props) {
                                             />
                                         </form>
                                     </div>
-                                    <div className="lifestyle-widget-nav  mt-md-5">
+                                    <div className="lifestyle-widget-nav">
                                         <ul className="nav">
                                             {categories.map((cate, index) => (
                                                 <li className="nav-item " key={index}>
