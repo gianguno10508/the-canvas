@@ -623,7 +623,11 @@
     .readingH_item .post_entry_img {
         width: 100%;
     }
-
+    .post_entry:hover img {
+        transform: scale(1.0);
+        overflow: hidden;
+        transition: all 0.3s;
+    }
     .ad {
         padding-left: 0px;
     }
