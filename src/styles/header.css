@@ -190,7 +190,7 @@ button:not(:disabled) {
 
 .header .header-misc .dark-mode .white-icon,
 .header .header-misc .dark-mode .dark-icon {
-    position: absolute;
+    /* position: absolute; */
     top: -10px;
     left: 14px;
 }
