@@ -108,7 +108,7 @@ function Header(props) {
 
         return ref;
     };
-    const[searchText, setSearchText] = useState(null);
+    const [searchText, setSearchText] = useState(null);
     const handleClickOutside = () => {
         setShowSearch('disnone');
         setNewShowSearch([]);
@@ -156,29 +156,29 @@ function Header(props) {
     };
     const handleClickOutsideMenu = () => {
         setShowMenu('disnone');
-        
+
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
-    const handleSearchHeader=(event)=>{
-        const newShowSearch=[];
-        if(event.target.value.length > 0){
+    const handleSearchHeader = (event) => {
+        const newShowSearch = [];
+        if (event.target.value.length > 0) {
             props.datalifeStyle.filter((item) => {
                 const searchValue = event.target.value.toLowerCase();
                 const searchDataHeader = item.category.toLowerCase();
                 return (searchValue && searchDataHeader.startsWith(searchValue) && searchDataHeader !== searchValue);
-            }).map((item,i)=>{
+            }).map((item, i) => {
                 newShowSearch[i] = item;
             });
             setNewShowSearch(newShowSearch);
             setSearchText('done')
-        }else{
+        } else {
             setNewShowSearch([])
         }
     }
-    $(document).ready(function(){
+    $(document).ready(function () {
         var selector = '.navbar-nav li a';
 
-        $(selector).on('click', function(){
+        $(selector).on('click', function () {
             $(selector).removeClass('current');
             $(this).addClass('current');
         });
@@ -224,27 +224,27 @@ function Header(props) {
                         <div className={`top-search ${colorWhite}`} >
                             <i className="fa-solid fa-magnifying-glass" onClick={handleItemClickSearch}></i>
                             <div ref={ref} className={`search-box ${showSearch}`}>
-                                {searchText == 'done' ? 
-                                <input type='text' placeholder="Search here..."  onChange={handleSearchHeader}/> : <input type='text' placeholder="Search here..." value=""  onChange={handleSearchHeader}/>}
+                                {searchText == 'done' ?
+                                    <input type='text' placeholder="Search here..." onChange={handleSearchHeader} /> : <input type='text' placeholder="Search here..." value="" onChange={handleSearchHeader} />}
                                 <div className="box_result">
                                     {showNewSearch.length > 0 ?
-                                        showNewSearch.map((item,i)=>(
-                                        <Link to='/detail' key={i}>
-                                            <div className="show_result_search text-start row">
-                                                <div className="col-4 img_show_result_search">
-                                                    <img src={item.img} alt=''/>
+                                        showNewSearch.map((item, i) => (
+                                            <Link to='/detail' key={i}>
+                                                <div className="show_result_search text-start row">
+                                                    <div className="col-4 img_show_result_search">
+                                                        <img src={item.img} alt='' />
+                                                    </div>
+                                                    <div className="text_show_result_search col-8">
+                                                        <h4 className="color-underline">{item.name}</h4>
+                                                        <p>{item.category}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="text_show_result_search col-8">
-                                                    <h4 className="color-underline">{item.name}</h4>
-                                                    <p>{item.category}</p>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                        )).slice(0,3)
-                                    :
-                                    <h3>Search Now</h3>
+                                            </Link>
+                                        )).slice(0, 3)
+                                        :
+                                        <h5>No Item</h5>
                                     }
-                                </div>      
+                                </div>
                             </div>
                         </div>
                         <div className="dark-mode" onClick={(event) => handleItemClick(event)}>

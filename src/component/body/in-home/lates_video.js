@@ -40,7 +40,7 @@ function LatesVideo(props) {
         <>
             <div className='lastes_title'>
                 <h3 className={`mb-0 ${colorWhite}`}>Latest Videos</h3>
-                <button className='btn btn-sm btn-outline-secondary'>More Content <i className="far fa-arrow-right"></i></button>
+                <button className='btn btn-sm btn-outline-secondary'>More Content<i className="fa-solid fa-arrow-right"></i></button>
             </div>
             <div className='lastes_item row posts-md'>
                 {data.map((value, i) => (

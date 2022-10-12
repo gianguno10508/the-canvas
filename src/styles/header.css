@@ -167,7 +167,7 @@ button:not(:disabled) {
 .header .header-misc .top-search {
     margin: 0 8px;
     position: relative;
-    padding: 4px;
+    padding-top: 4px;
 }
 
 .header .header-misc .top-search .search-box {
@@ -212,7 +212,8 @@ button:not(:disabled) {
 .header .menu #navbarNav ul li a>div {
     position: relative;
 }
-.header .menu #navbarNav ul li a.current>div::after{
+
+.header .menu #navbarNav ul li a.current>div::after {
     content: " ";
     width: 100% !important;
     height: 4px;
@@ -222,6 +223,7 @@ button:not(:disabled) {
     top: 100%;
     left: 0;
 }
+
 .header .menu #navbarNav ul li a>div::after {
     content: " ";
     width: 0%;
@@ -268,6 +270,10 @@ button:not(:disabled) {
     border-color: #F39887 !important;
 }
 
+.bg-dark-mode .menu .navbar-toggler {
+    background-color: #eee !important;
+}
+
 .search-box {
     z-index: 100;
     background-color: rgb(241, 241, 241);
@@ -279,7 +285,7 @@ button:not(:disabled) {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
     color: #222;
     z-index: 100;
 }
@@ -321,6 +327,45 @@ button:not(:disabled) {
     margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1520px) {
+    .header .header-misc .top-search .search-box {
+        left: -200px;
+    }
+}
+
+@media only screen and (max-width: 1470px) {
+    .header .header-misc .top-search .search-box {
+        left: -250px;
+    }
+
+    .header .dropdown-menu {
+        left: -30px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .header .dropdown-menu {
+        left: -45px;
+    }
+
+    .header a.standard-logo {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+    .header .menu {
+        margin-top: 30px;
+        padding: 5px 0;
+    }
+
+    .header .dropdown-menu {
+        left: -50px;
+    }
+}
+
 @media only screen and (max-width:992px) {
     .header .menu #navbarNav ul li a {
         text-transform: uppercase;
@@ -330,19 +375,27 @@ button:not(:disabled) {
         color: #F39887;
     }
 
-    .header .menu #navbarNav ul li a:hover>div::after {
-        width: 10%;
-
+    .header .menu #navbarNav ul li a.current>div::after {
+        width: 10% !important;
+        left: 45% !important;
     }
+}
 
-    .header .menu #navbarNav ul li a>div::after {
-        top: 100%;
-        left: 45%;
-    }
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:767px) {
+    /* .header .header-misc .top-search .search-box {
+        left: -170px;
+    } */
 }
 
 @media only screen and (max-width:576px) {
     .header-row {
         flex-flow: column;
+    }
+
+    .header .header-misc .top-search .search-box {
+        left: -160px;
     }
 }
