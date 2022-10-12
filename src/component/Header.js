@@ -224,8 +224,7 @@ function Header(props) {
                         <div className={`top-search ${colorWhite}`} >
                             <i className="fa-solid fa-magnifying-glass" onClick={handleItemClickSearch}></i>
                             <div ref={ref} className={`search-box ${showSearch}`}>
-                                {searchText == 'done' ?
-                                    <input type='text' placeholder="Search here..." onChange={handleSearchHeader} /> : <input type='text' placeholder="Search here..." value="" onChange={handleSearchHeader} />}
+                                <input type='text' placeholder="Search here..." onChange={handleSearchHeader} />
                                 <div className="box_result">
                                     {showNewSearch.length > 0 ?
                                         showNewSearch.map((item, i) => (
