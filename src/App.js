@@ -12,11 +12,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Routes>
-        <Route path='/lifestyle' element={<Lifestyle />} />
+      <Routes>
+        {/* <Route path='/lifestyle' element={<Lifestyle />} /> */}
         <Route path="/" element={<Home />} />
-        <Route path="/detail" element={<Detail />} />
-      </Routes> */}
+        {/* <Route path="/detail" element={<Detail />} /> */}
+      </Routes>
       <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
       <Footer />
     </div>
