@@ -367,10 +367,45 @@
     color: #fff;
 }
 
+@media only screen and (max-width:1420px) {
+    .lifestyle-content-list .dropdown-menu {
+        left: -15px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .lifestyle-sub .col-lg-5 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .lifestyle-sub .col-lg-6 {
+        width: 100%;
+    }
+
+    .lifestyle-sub .col-lg-6 .form-control {
+        height: auto;
+        width: 80%;
+    }
+
+    .lifestyle-sub .section-sub {
+        padding: 60px 60px !important;
+    }
+
+}
+
+@media only screen and (max-width:1050px) {
+    .lifestyle-content-list .dropdown-menu {
+        left: -30px;
+    }
+}
+
 @media only screen and (max-width:1024px) {
     .lifestyle-content {
         position: relative;
-        padding: 0;
+        /* padding: 0; */
+        margin-top: 0px;
+        padding: 0px 0px 80px 0px;
     }
 
     .lifestyle-content-list .col-3 {
@@ -388,9 +423,11 @@
     .lifestyle-content-list .lifestyle-widget-nav {
         margin-bottom: 30px;
     }
-    .sticky-top-cate{
+
+    .sticky-top-cate {
         position: unset !important;
     }
+
     .lifestyle-widget-nav .nav {
         flex-direction: row;
         gap: 10px;
@@ -410,9 +447,58 @@
         background-color: #eee !important;
         color: #444 !important;
     }
+
+
 }
-@media only screen and (max-width:768px){
-    .lifestyle-sub .col-lg-6 .form-control{
-        
+
+@media only screen and (max-width:993px) {
+    .header .menu #navbarNav ul li {
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .lifestyle-content-list .lifestyle-item-content p {
+        margin-bottom: 15px;
+    }
+
+    /* .lifestyle-content-list .container {
+        padding: 0 !important;
+    } */
+
+    .lifestyle-sub form {
+        flex-direction: column !important;
+    }
+
+    .lifestyle-sub .col-lg-6 .form-control {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 50px;
+    }
+
+    .lifestyle-sub .button {
+        margin: 0 auto !important;
+        align-items: center;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:590px) {
+    .lifestyle-content-list .dropdown-menu {
+        left: -50px;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .lifestyle-sub .col-lg-6 .form-control {
+        font-size: 14px;
+    }
+
+    .lifestyle-sub .col-lg-5 h3 {
+        font-size: 20px;
+    }
+
+    .lifestyle-sub .button {
+        font-size: 12px;
     }
 }
