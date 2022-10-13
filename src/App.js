@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
+      <MessengerCustomerChat/>
       <p>dsfdasdsdf</p>
       <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
