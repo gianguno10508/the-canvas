@@ -266,7 +266,7 @@ function Header(props) {
                             <div ref={refdrmenu} className={`justify-content-lg-center collapse navbar-collapse ${showMenu}`} id="navbarNav">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link to='/' className={`nav-link current ${colorWhite}`} href="#"><div ref={ref} id="my-element">Home</div></Link>
+                                        <Link to='/' className={`nav-link current ${colorWhite}`} href="#"><div ref={refHome} id="my-element">Home</div></Link>
                                     </li>
                                     <li className="nav-item">
                                         <a className={`nav-link ${colorWhite}`} href="#"><div>World</div></a>
