@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
+      <p>dsfdf</p>
       <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
