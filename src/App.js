@@ -11,14 +11,14 @@ import TestFb from './component/TestFb';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
-      {/* <Routes>
+      <Header />
+      <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
         <Route path="/detail" element={<Detail />} />
         <Route path='/business' element={<Business />} />
       </Routes>
-      <Footer /> */}
+      <Footer />
       <TestFb />
     </div>
   );
