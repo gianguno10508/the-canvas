@@ -9,6 +9,7 @@ import herofull from '../../acsset/image/hero-full.jpg'
 import MediaDetailContent from './in_detail/detail_media_content';
 import PostDetail from './in_detail/detail_posts'
 
+import DetailComment from './in_detail/detail_comment'
 function Detail(props) {
     console.log(props.darkmode);
 
@@ -40,7 +41,7 @@ function Detail(props) {
                                 <div className='col-lg-6'>
                                     <div className={`detail-entry-title ${colorWhite}`}>
                                         <div className='detail-entry-categories'>
-                                            <a href='#2'>Coronavirus Update - World</a>
+                                            <a href='#'>Coronavirus Update - World</a>
                                         </div>
                                         <h2>All online Conferences to save your box, get Inspired and Stay Connected</h2>
                                     </div>
@@ -50,12 +51,12 @@ function Detail(props) {
                                 <div className='detail-entry-meta'>
                                     <ul>
                                         <li>10th July 2014</li>
-                                        <li>By  <a href='#2'>SemiColonWeb</a></li>
+                                        <li>By  <a href='#'>SemiColonWeb</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className='detail-entry-image mt-5'>
-                                <a href='#2'>
+                            <div className='detail-entry-image'>
+                                <a href='#'>
                                     <img className='rounded' src={herofull} alt="herofull"/>
                                 </a>
                             </div>
@@ -67,6 +68,7 @@ function Detail(props) {
                                     <div className='col-lg-1'></div>
                                     <div className='col-lg-6'>
                                         <DetailTextContent />
+                                        <DetailComment />  
                                         <LeaveCmtDetail />
                                     </div>
                                 </div>

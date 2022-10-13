@@ -15,7 +15,7 @@ function DetailComment(props){
         }
     }, [props.darkmode]);
     return(
-        <div className='detailComments' >
+        <div className='detailComments text-start' >
             <h3 id='comments-title' className={`${colorWhite}`}><span>3</span> Comments</h3>
             <ol className="commentlist">
                 <li className="comment even thread-even depth-1" id="li-comment-1">
@@ -27,13 +27,13 @@ function DetailComment(props){
                         </div>
                     </div>
                     <div className="comment-content">
-                        <div className='comment-author'> <a className={`comment-author ${colorEEE}`} href="#2">John Doe</a>
+                        <div className='comment-author'> <a className={`comment-author ${colorEEE}`} href="#">John Doe</a>
                             <span>
-                                <a href="#2" title="Permalink to this comment">April 24, 2012 at 10:46 am</a>
+                                <a href="#" title="Permalink to this comment">April 24, 2012 at 10:46 am</a>
                             </span>
                         </div>
                         <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                        <a className='comment-reply-link' href='#2'>
+                        <a className='comment-reply-link' href='#'>
                             <i class="fas fa-reply"></i>
                         </a>
                     </div>
@@ -50,9 +50,10 @@ function DetailComment(props){
                             </div>
                             <div className="comment-content">
                                 <div className="comment-author">
-                                <a href='#2' rel='external nofollow' className={`url ${colorEEE}`}>SemiColon</a><span><a href="#2" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
+                                <a href='#' rel='external nofollow' className={`url ${colorEEE}`}>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span>
+                                </div>
                                 <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <a className='comment-reply-link' href='#2'>
+                                <a className='comment-reply-link' href='#'>
                                     <i class="fas fa-reply"></i>
                                 </a>
                             </div>
@@ -73,11 +74,11 @@ function DetailComment(props){
                             <div className="comment-author">
                                 <a href='https://themeforest.net/user/semicolonweb' rel='external nofollow' className={`url ${colorEEE}`}>SemiColon</a>
                                 <span>
-                                    <a href="#3" title="Permalink to this comment">April 25, 2012 at 1:03 am</a>
+                                    <a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a>
                                 </span>
                             </div>
                             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                            <a className='comment-reply-link' href='#3'>
+                            <a className='comment-reply-link' href='#'>
                                 <i class="fas fa-reply"></i>
                             </a>
                         </div>

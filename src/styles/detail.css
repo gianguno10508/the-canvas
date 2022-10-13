@@ -65,6 +65,7 @@
     color: #444;
     font-weight: 600;
     line-height: 1.5;
+    font-size: 24px;
 }
 
 .singer-port-detail li {
@@ -93,6 +94,11 @@
 
 .detail-entry-title h2 {
     font-weight: 600 !important;
+    font-size: 34px;
+    color: #444;
+}
+.bg-dark-mode .detail-entry-title h2 {
+    color: #fff ;
 }
 
 .detail-entry-meta {
@@ -123,7 +129,9 @@
 .detail-entry-image img {
     display: block;
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    max-height: 535px;
+    object-fit: cover;
 }
 
 .detail-entry-meta ul {
@@ -137,8 +145,11 @@
     font-size: 90%;
     margin: 0 15px 10px 0;
     color: #999;
+    font-family: 'Roboto', sans-serif !important;
 }
-
+.bg-dark-mode .detail-entry-meta li {
+    color:#bbb
+}
 .detail-entry-meta li:nth-child(2):before {
     content: '\205E';
     width: 5px;
@@ -183,12 +194,15 @@
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 0;
+    font-weight: 400;
 }
 
 .detail-media-content h5 {
     font-size: 14px;
     color: #444;
     font-weight: 700;
+    margin-bottom: 0.5rem !important;
+    font-family: 'Domine', serif !important;
 }
 
 .divsi {
@@ -203,7 +217,7 @@
     height: 32px;
     font-size: 14px;
     line-height: 30px !important;
-    margin: 0 5px 5px 0;
+    margin: 0 7px 7px 0;
     border-radius: 50%;
     overflow: hidden;
     text-align: center !important;
@@ -264,7 +278,9 @@
     line-height: 1.65 !important;
     color: #555;
 }
-
+.detail-text-content p{
+    margin-bottom: 30px;
+}
 .detail-text-content {
     font-family: 'Roboto', sans-serif !important;
 }
@@ -278,7 +294,10 @@
 }
 
 .bg-dark-mode .detail-text-content {
-    color: rgba(255, 255, 255, .7) !important;
+    color: #eee !important;
+}
+.bg-dark-mode .detail-text-content p{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .bg-dark-mode .detail-text-content blockquote {
@@ -320,8 +339,15 @@
 
 .tagcloud h4 {
     margin-bottom: 30px;
+    font-family: 'Domine', serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
 }
-
+.bg-dark-mode .tagcloud h4 {
+    color:#eee
+}
 .tagcloud a {
     display: block;
     float: left;
@@ -332,10 +358,12 @@
     font-size: 13px !important;
     color: #666;
     border-radius: 2px;
+    transition: all .3s ease-in-out;
 }
 
 .bg-dark-mode .tagcloud a {
-    border-color: rgba(255, 255, 255, .2);
+    border-color: rgba(255,255,255,.15);
+    color: rgba(255,255,255,.6);
 }
 
 .bg-dark-mode .tagcloud a:hover {
@@ -369,7 +397,15 @@
     border-top-color: rgba(255, 255, 255, .2);
     ;
 }
-
+.detailComments .commentlist{
+    list-style: none;
+    padding-bottom: 50px;
+    margin: 0 0 50px;
+    border-bottom: 1px solid #eee;
+}
+.bg-dark-mode .detailComments .commentlist{
+    border-bottom-color: rgba(255,255,255,.1);
+}
 .commentlist ol li {
     list-style: none;
     padding-bottom: 50px;
@@ -432,15 +468,32 @@
     border: none;
     color: #333;
     font-weight: 700;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
-
+.comment-content .comment-author a:hover {
+    color: #F39887;
+}
+.comment-content .comment-author span a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+}
+.comment-content .comment-author span a:hover{
+    color: #888;
+}
+.comment-content p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
 .bg-dark-mode .comment-author a:hover {
     color: #eee !important;
 }
 
-.comment-content .comment-author span a {
+/* .comment-content .comment-author span a {
     color: #aaa;
-}
+} */
 
 .commentlist span a:hover {
     color: #888;
@@ -479,6 +532,9 @@
     font-weight: 400;
     margin-bottom: 5px;
     opacity: .7;
+    cursor: pointer;
+    font-family: 'Domine', serif !important;
+    font-size: 13px;
 }
 
 .leaveCmtDetail .row .col-4 {
@@ -504,14 +560,18 @@ textarea .form-control {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
+    border-radius: 3px;
 }
 
 .bg-dark-mode .form-control {
-    background-color: rgba(255, 255, 255, .02);
-    border-color: rgba(255, 255, 255, .16);
-    color: #eee;
+    background-color: rgba(255,255,255,0.02)!important;
+    border-color: rgba(255,255,255,0.16);
+    color: #EEE;
 }
-
+.bg-dark-mode .form-control:focus{
+    background-color: rgba(0,0,0,.3)!important;
+    border: 2px solid rgba(255,255,255,0.2) !important;
+}
 .detail .leaveCmtDetail button {
     padding: 8px 26px;
     font-size: 16px;

@@ -146,6 +146,8 @@ button:not(:disabled) {
     color: #777;
     font-size: .875rem !important;
     line-height: 1.3;
+    padding: 0 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header .date-today::after,
@@ -225,22 +227,22 @@ button:not(:disabled) {
 .header .menu #navbarNav ul li a.current>div::after {
     content: " ";
     width: 100% !important;
-    height: 4px;
-    background-color: #F39887;
+    height: 5px;
+    background-color: #f3978757;
     transition: all .3s ease;
     position: absolute;
-    top: 100%;
+    top: 62%;
     left: 0;
 }
 
 .header .menu #navbarNav ul li a>div::after {
     content: " ";
     width: 0%;
-    height: 4px;
-    background-color: #F39887;
+    height: 5px;
+    background-color: #f3978757;
     transition: all .3s ease;
     position: absolute;
-    top: 100%;
+    top: 62%;
     left: 0;
 }
 
@@ -249,10 +251,11 @@ button:not(:disabled) {
 }
 
 .header .menu {
-    margin-top: 50px;
+    /* margin-top: 30px; */
+    margin-top: 1.5rem;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    padding: 10px 0;
+    padding: 7px 0;
 }
 
 .bg-dark-mode .menu {
@@ -398,10 +401,10 @@ button:not(:disabled) {
 
 @media only screen and (max-width:991px) {}
 
-@media only screen and (max-width:767px) {
-    /* .header .header-misc .top-search .search-box {
-        left: -170px;
-    } */
+@media only screen and (max-width:768px) {
+    .header .header-row{
+        flex-flow: column;
+    }
 }
 
 @media only screen and (max-width:576px) {

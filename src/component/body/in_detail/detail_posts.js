@@ -49,14 +49,14 @@ function PostDetail(props){
                     <div className='col-lg-3 col-sm-6' key={i}>
                         <div className='post_entry text-start'>
                             <div className='post_entry_img'>
-                                <a href="#e"><img className='rounded' src={value.img} alt='anh'/></a>
+                                <a href="#"><img className='rounded' src={value.img} alt='anh'/></a>
                             </div>
                             <div className='post_entry_title'>
                                 <div className='post_entry_cate'>
-                                    <a href='#2' className={`${colorWhite}`}>{value.cateP}</a>
+                                    <a href='#' className={`${colorWhite}`}>{value.cateP}</a>
                                 </div>
                                 <h3>
-                                    <a href="#s" className={`color-underline stretched-link ${colorWhite}`}>{value.name}</a>
+                                    <a href="#" className={`color-underline stretched-link ${colorWhite}`}>{value.name}</a>
                                 </h3> 
                             </div>
                             <div className='post_entry_time'>
