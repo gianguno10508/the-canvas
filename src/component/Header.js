@@ -256,7 +256,7 @@ function Header(props) {
 
                         <div className="user-icon">
                             <span className={`icon-login ${colorWhite}`}>
-                                <i class="fa-solid fa-user"></i>
+                                <i className="fa-solid fa-user"></i>
                             </span>
                         </div>
 

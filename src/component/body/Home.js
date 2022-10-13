@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PostDetail from '../body/in_detail/detail_posts';
 import pD1 from '../../acsset/image/postD1.jpg';
 import "animate.css/animate.min.css";
@@ -26,10 +26,59 @@ function Home(props) {
         }
     }, [props.darkmode]);
 
+    // +++show-mess++
+    const [showMess, setShowMess] = useState('disnone-mess');
+    const handleClickMess = (event) => {
+        if (showMess == 'show-mess') {
+            setShowMess('disnone-mess');
+        } else {
+            setShowMess('show-mess');
+            event.stopPropagation();
+        }
+    }
+
+    const useOutsideClickMess = (callback) => {
+        const refdrmess = useRef();
+
+        useEffect(() => {
+            const handleItemClickMess = (event) => {
+                if (refdrmess.current && !refdrmess.current.contains(event.target)) {
+                    callback();
+                }
+            };
+            document.addEventListener('click', handleItemClickMess);
+
+            return () => {
+                document.removeEventListener('click', handleItemClickMess);
+            };
+        }, [refdrmess]);
+
+        return refdrmess;
+    };
+    const handleClickOutsideMess = () => {
+        setShowMess('disnone-mess');
+    };
+    const refmess = useOutsideClickMess(handleClickOutsideMess);
+
 
     return (
         <div className={` ${bgDarkHome} home `}>
+
             <div className='container'>
+                <button className='btn-mess-icon' onClick={(event) => handleClickMess(event)}>
+                    <i className="fa-solid fa-pen-to-square"></i>
+                </button>
+                <div ref={refmess} className={`mess-show ${showMess}`}>
+                    <a href='#'> <button className='btn-messenger-icon'>
+                        <i className="fa-brands fa-facebook-messenger"></i>
+                    </button>
+                    </a>
+                    <a href='#'>
+                        <button className='btn-facebook-icon'>
+                            <i className="fa-brands fa-facebook"></i>
+                        </button>
+                    </a>
+                </div>
                 <div className='row'>
                     <OutsandingHome />
                     <HighLightHome />
@@ -48,7 +97,7 @@ function Home(props) {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        dispatchLifeStyle:(data)=>{
+        dispatchLifeStyle: (data) => {
             dispatch(actLifeStyle(data))
         }
     };
@@ -58,4 +107,4 @@ const mapStateToProps = (state, ownProps) => {
         darkmode: state.darkmode
     };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
