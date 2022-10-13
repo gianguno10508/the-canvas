@@ -7,6 +7,7 @@ import Lifestyle from './component/body/Lifestyle';
 import Detail from './component/body/Detail';
 import Business from './component/body/Business';
 // import TestFb from './component/TestFb';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
   return (
     <div className="App">
