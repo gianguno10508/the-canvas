@@ -6,13 +6,14 @@ import Home from './component/body/Home';
 import Lifestyle from './component/body/Lifestyle';
 import Detail from './component/body/Detail';
 import Business from './component/body/Business';
-import TestFb from './component/TestFb';
+// import TestFb from './component/TestFb';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <TestFb />
+      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
       <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
