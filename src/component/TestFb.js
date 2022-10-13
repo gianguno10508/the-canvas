@@ -1,11 +1,12 @@
-import { EmbeddedPost, FacebookProvider, Like } from 'react-facebook';
-function TestFb(){
-    return(
-        <FacebookProvider appId="1962804053924433">
-            <EmbeddedPost href="https://www.facebook.com/SieuSaoNhatBong/photos/a.102341032480946/158649313516784/" width="500" />
-            <p>sdsdsd</p>
-        </FacebookProvider>
-        
-    )
+import { FacebookProvider, EmbeddedPost, Page,Feed, useFacebook } from 'react-facebook';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+export default function EmbeddedPostExample() {
+  return (
+    <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" htmlRef="<REF_STRING>" />
+    // <FacebookProvider appId="1505620756529166">
+    //     <button disabled={isLoading} onClick={handleClick}>
+    //         Login
+    //     </button>
+    // </FacebookProvider>
+  );
 }
-export default TestFb;
