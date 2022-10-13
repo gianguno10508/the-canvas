@@ -128,7 +128,7 @@ function Header(props) {
     // +++showMenu+++
     const [showMenu, setShowMenu] = useState(null);
     const handleItemClickMenu = (event) => {
-        if (showDropdown == 'show') {
+        if (showMenu == 'show') {
             setShowMenu('disnone');
         } else {
             setShowMenu('show');
@@ -253,6 +253,13 @@ function Header(props) {
                                 <i className="fa-regular fa-sun"></i>
                             </span>
                         </div>
+
+                        <div className="user-icon">
+                            <span className={`icon-login ${colorWhite}`}>
+                                <i className="fa-solid fa-user"></i>
+                            </span>
+                        </div>
+
                     </div>
                 </div>
                 <div className="menu">
@@ -278,7 +285,7 @@ function Header(props) {
                                         <Link to='/lifestyle' className={`nav-link ${colorWhite}`} href="#"><div>Lifestyle</div></Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className={`nav-link ${colorWhite}`} href="#"><div>Business</div></a>
+                                        <Link className={`nav-link ${colorWhite}`} to='/business'><div>Business</div></Link>
                                     </li>
                                     <li className="nav-item">
                                         <a className={`nav-link ${colorWhite}`} href="#"><div>Finance</div></a>

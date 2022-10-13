@@ -2,11 +2,79 @@
     background-color: #111 !important;
 }
 
+
+
+.disnone-mess {
+    display: none !important;
+}
+
+
 .home {
     padding: 50px 0;
     z-index: 2;
+    position: relative;
 }
 
+/* ++icon ++ */
+.home .tab-mess {
+    position: fixed;
+    bottom: 5%;
+    z-index: 5;
+    right: 2%;
+    transition: all .12s ease-in-out;
+}
+
+.home .btn-mess-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+
+
+}
+
+.home .btn-mess-icon:hover,
+.home .btn-messenger-icon:hover,
+.home .btn-facebook-icon:hover {
+    box-shadow: 5px 8px 24px 5px rgb(137, 137, 145);
+    transform: scale(1.1);
+}
+
+.home .mess-show {
+    position: absolute;
+    bottom: 115%;
+}
+
+.home .btn-messenger-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(232, 101, 195, 0.544);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.home .btn-facebook-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(22, 100, 184, 0.524);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.bg-dark-mode-home .btn-mess-icon {
+    background-color: #eee !important;
+    color: #444;
+}
+
+/* +++icon+++ */
 .home .outstanding {
     border-right: 1px solid rgba(170, 170, 170, 0.281);
 }
@@ -603,8 +671,9 @@
 }
 
 @media only screen and (max-width:768px) {
+
     .highlightHome .post_entry,
-    .readingH_item .row{
+    .readingH_item .row {
         flex-flow: column;
         width: 100%;
         margin: 0;
@@ -622,11 +691,13 @@
     .readingH_item .post_entry_img {
         width: 100%;
     }
+
     .post_entry:hover img {
         transform: scale(1.0);
         overflow: hidden;
         transition: all 0.3s;
     }
+
     .ad {
         padding-left: 0px;
     }
@@ -638,6 +709,12 @@
 
     .lastes_item .post_entry {
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    .home .tab-mess {
+        right: 4%;
     }
 }
 
