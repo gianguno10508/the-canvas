@@ -33,7 +33,7 @@ function DetailTextContent(props){
                 <li>Accessibility checklist</li>
                 <li>Closing thoughts</li>
             </ol>
-            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="#3">Curabitur blandit tempus porttitor</a>. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="#">Curabitur blandit tempus porttitor</a>. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
             <blockquote>
                 <p>Vestibulum id ligula porta felis euismod semper. 
                 Sed posuere consectetur est at lobortis. Aenean eu leo
@@ -67,15 +67,15 @@ function DetailTextContent(props){
             <div className="line"></div>
             <div className="tagcloud">
                 <h4>Related Tags</h4>
-                <a href="#1">general</a>
-                <a href="#1">information</a>
-                <a href="#1">media</a>
-                <a href="#1">press</a>
-                <a href="#1">gallery</a>
-                <a href="#1">illustration</a>
+                <a href="#">general</a>
+                <a href="#">information</a>
+                <a href="#">media</a>
+                <a href="#">press</a>
+                <a href="#">gallery</a>
+                <a href="#">illustration</a>
             </div>
             <div className="clear"></div>   
-            <DetailComment />      
+               
         </div>
         
     )

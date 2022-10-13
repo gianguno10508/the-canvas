@@ -19,19 +19,19 @@ function MediaDetailContent(props){
         </div>
         <h5 className={`mb-2 text-start ${colorWhite}`}>Share this Post:</h5>
         <div className='divsi'>
-            <a href='#2' className='detail-social-icon si-facebook si-rounded'>
+            <a href='#' className='detail-social-icon si-facebook si-rounded'>
                 <i className="fab fa-facebook-f"></i>
                 <i className="fab fa-facebook-f"></i>
             </a>
-            <a href='#2' className='detail-social-icon si-twitte si-rounded'>
+            <a href='#' className='detail-social-icon si-twitte si-rounded'>
                 <i className="fab fa-twitter"></i>
                 <i className="fab fa-twitter"></i>
             </a>
-            <a href='#2' className='detail-social-icon si-pinterest si-rounded'>
+            <a href='#' className='detail-social-icon si-pinterest si-rounded'>
                 <i className="fab fa-pinterest"></i>
                 <i className="fab fa-pinterest"></i>
             </a>
-            <a href='#2' className='detail-social-icon si-wifi si-rounded'>
+            <a href='#' className='detail-social-icon si-wifi si-rounded'>
                 <i className="fas fa-wifi"></i>
                 <i className="fas fa-wifi"></i>
             </a>
