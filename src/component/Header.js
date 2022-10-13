@@ -285,7 +285,7 @@ function Header(props) {
                                         <Link to='/lifestyle' className={`nav-link ${colorWhite}`} href="#"><div>Lifestyle</div></Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className={`nav-link ${colorWhite}`} href="#"><div>Business</div></a>
+                                        <Link className={`nav-link ${colorWhite}`} to='/business'><div>Business</div></Link>
                                     </li>
                                     <li className="nav-item">
                                         <a className={`nav-link ${colorWhite}`} href="#"><div>Finance</div></a>

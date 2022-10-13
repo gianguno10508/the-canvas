@@ -65,20 +65,22 @@ function Home(props) {
         <div className={` ${bgDarkHome} home `}>
 
             <div className='container'>
-                <button className='btn-mess-icon' onClick={(event) => handleClickMess(event)}>
-                    <i className="fa-solid fa-pen-to-square"></i>
-                </button>
-                <div ref={refmess} className={`mess-show ${showMess}`}>
-                    <a href='#'> <button className='btn-messenger-icon'>
-                        <i className="fa-brands fa-facebook-messenger"></i>
-                    </button>
-                    </a>
-                    <a href='#'>
-                        <button className='btn-facebook-icon'>
-                            <i className="fa-brands fa-facebook"></i>
+                {/* <div className='tab-mess'>
+                    <div ref={refmess} className={`mess-show ${showMess}`}>
+                        <a href='#'> <button className='btn-messenger-icon'>
+                            <i className="fa-brands fa-facebook-messenger"></i>
                         </button>
-                    </a>
-                </div>
+                        </a>
+                        <a href='#'>
+                            <button className='btn-facebook-icon'>
+                                <i className="fa-brands fa-facebook"></i>
+                            </button>
+                        </a>
+                    </div>
+                    <button className='btn-mess-icon' onClick={(event) => handleClickMess(event)}>
+                        <i className="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </div> */}
                 <div className='row'>
                     <OutsandingHome />
                     <HighLightHome />
