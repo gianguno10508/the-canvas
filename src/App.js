@@ -18,7 +18,7 @@ function App() {
         <Route path="/detail" element={<Detail />} />
       </Routes> */}
       <TestFb />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
