@@ -86,9 +86,9 @@ function Home(props) {
                     <HighLightHome />
                 </div>
                 <NewLetter />
-                <AnimationOnScroll animateIn="animate__bounceIn">
+                {/* <AnimationOnScroll animateIn="animate__bounceIn">
                     <LatesVideo />
-                </AnimationOnScroll>
+                </AnimationOnScroll> */}
             </div>
             <SpotLight bgDarkHome={bgDarkHome} />
             <BasedOn bgDarkHome={bgDarkHome} />
