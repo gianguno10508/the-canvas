@@ -37,7 +37,7 @@ function ReadingHistory({ bgDarkHome }) {
     return (
         <div className={`${bgDarkHome} readingHistory col-lg-8  text-start`}>
             <h3 id='rhh3'>Based On Your Reading History</h3>
-            <div className='row col-mb-50'>
+            <div className='row readingHistory-row col-mb-50'>
                 {data.map((v, i) => (
                     <div className='col-12 readingH_item' key={i}>
                         <div className='row'>

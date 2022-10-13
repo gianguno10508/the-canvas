@@ -762,12 +762,20 @@
     .lastes_item .post_entry {
         margin-bottom: 20px;
     }
+   
 }
 
 @media only screen and (max-width:580px) {
     .home .tab-mess {
         right: 4%;
     }
+     .readingHistory .readingHistory-row{
+        margin: 0 !important;
+    }
+    .readingH_item{
+        padding-left: 0;
+    }
+
 }
 
 @media only screen and (max-width:400px) {
