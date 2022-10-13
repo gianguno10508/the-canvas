@@ -11,7 +11,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       {/* <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
