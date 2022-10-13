@@ -7,7 +7,6 @@ import Lifestyle from './component/body/Lifestyle';
 import Detail from './component/body/Detail';
 import Business from './component/body/Business';
 // import TestFb from './component/TestFb';
-import TestFb from './component/TestFb';
 function App() {
   return (
     <div className="App">
@@ -17,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/detail" element={<Detail />} />
       </Routes> */}
-      <TestFb />
+      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
       <Footer />
     </div>
   );
