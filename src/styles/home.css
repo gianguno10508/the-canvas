@@ -740,7 +740,8 @@
         padding-right: 0;
     }
 
-    .readingH_item .post_entry_img {
+    .readingH_item .post_entry_img,
+    .readingH_item .post_entry_title {
         width: 100%;
     }
 
@@ -775,7 +776,20 @@
     .readingH_item{
         padding-left: 0;
     }
+    .highlightHome .post_entry .col-md-4{
+        padding-left: 0;
+    }
+    .readingH_item .post_entry_img{
+        padding-left: 0;
+        padding-right: 0;
 
+    }
+    .home-posts .col-md-6:nth-child(n+2){
+        border-left: none;
+    }
+    .home {
+        padding-bottom: 0;
+    }
 }
 
 @media only screen and (max-width:400px) {
