@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <TestFb />
       <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
@@ -19,7 +20,6 @@ function App() {
         <Route path='/business' element={<Business />} />
       </Routes>
       <Footer />
-      <TestFb />
     </div>
   );
 }
