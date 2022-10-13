@@ -55,7 +55,7 @@ function TheWeek({ bgDarkHome }) {
             <div className='ad row'>
                 <h3 id='rhh3'>Ad</h3>
                 <div className='col-12'>
-                    <FacebookProvider appId="1962804053924433">
+                    <FacebookProvider appId="1505620756529166">
                         <EmbeddedPost href="https://www.facebook.com/SieuSaoNhatBong/photos/a.102341032480946/158649313516784/" width="200" />
                     </FacebookProvider>
                 </div>
