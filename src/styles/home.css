@@ -763,9 +763,15 @@
     .lastes_item .post_entry {
         margin-bottom: 20px;
     }
-   
-}
+    .highlightHome .post_entry .col-md-4{
+        padding-left: 0;
+    }
+    .readingH_item .post_entry_img{
+        padding-left: 0;
+        padding-right: 0;
 
+    }
+}
 @media only screen and (max-width:580px) {
     .home .tab-mess {
         right: 4%;
@@ -776,14 +782,7 @@
     .readingH_item{
         padding-left: 0;
     }
-    .highlightHome .post_entry .col-md-4{
-        padding-left: 0;
-    }
-    .readingH_item .post_entry_img{
-        padding-left: 0;
-        padding-right: 0;
 
-    }
     .home-posts .col-md-6:nth-child(n+2){
         border-left: none;
     }
