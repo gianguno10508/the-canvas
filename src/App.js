@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './component/body/Home';
 import Lifestyle from './component/body/Lifestyle';
 import Detail from './component/body/Detail';
-import Business from './component/body/Business';
+// import Business from './component/body/Business';
 // import TestFb from './component/TestFb';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
@@ -13,10 +13,14 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        {/* <Route path='/lifestyle' element={<Lifestyle />} /> */}
+        <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
+<<<<<<< HEAD
         {/* <Route path="/detail" element={<Detail />} /> */}
         {/* <Route path='/business' element={<Business />} /> */}
+=======
+        <Route path="/detail" element={<Detail />} />
+>>>>>>> 043e14f15700e433fea1b8651a96768abdfa45be
       </Routes>
       <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" />
       <Footer />
