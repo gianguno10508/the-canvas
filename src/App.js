@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/detail" element={<Detail />} />
       </Routes>
-      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166"/>
+      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" />
       <Footer />
     </div>
   );

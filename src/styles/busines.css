@@ -1,0 +1,54 @@
+.disnone {
+    display: none !important;
+}
+
+.bg-dark-mode-business {
+    background-color: #111 !important;
+}
+
+
+
+.business-post .category-business .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.business-post .category-business .dropdown-menu a {
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-left: 5px;
+    color: #444;
+}
+
+.business-post .category-business .dropdown-menu a:hover {
+    color: #1e2125;
+    background-color: #e9ecef;
+}
+
+.readPostBusiness .readingH_item .post_entry_title {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.bg-dark-mode-business .flex-grow-1 h3 {
+    color: #e9ecef !important;
+}
+
+.bg-dark-mode-business button#dropdownMenuButton {
+    background-color: #eee !important;
+}
+
+.bg-dark-mode-business .post_entry_cate a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.bg-dark-mode-business .post_entry_title h3 a {
+    color: #eee !important;
+    text-decoration: none;
+}
+
+.bg-dark-mode-business .post_readingH p {
+    color: #eee !important;
+}
