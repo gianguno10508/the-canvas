@@ -15,12 +15,7 @@ function App() {
       <Routes>
         <Route path='/lifestyle' element={<Lifestyle />} />
         <Route path="/" element={<Home />} />
-<<<<<<< HEAD
-        {/* <Route path="/detail" element={<Detail />} /> */}
-        {/* <Route path='/business' element={<Business />} /> */}
-=======
         <Route path="/detail" element={<Detail />} />
->>>>>>> 043e14f15700e433fea1b8651a96768abdfa45be
       </Routes>
       <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" />
       <Footer />
