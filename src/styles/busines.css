@@ -52,3 +52,17 @@
 .bg-dark-mode-business .post_readingH p {
     color: #eee !important;
 }
+
+@media only screen and (max-width:1440px) {
+    .business-post .category-business .dropdown-menu {
+        left: -15px;
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width:590px) {
+    .business-post .category-business .dropdown-menu {
+        width: 100%;
+        left: -20px;
+    }
+}
