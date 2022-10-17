@@ -8,6 +8,7 @@ import Detail from './component/body/Detail';
 import Business from './component/body/Business';
 // import TestFb from './component/TestFb';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import Tech from './component/body/Tech';
 function App() {
   return (
     <div className="App">
@@ -17,8 +18,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/business" element={<Business />} />
+        <Route path='/tech' element={<Tech />} />
       </Routes>
-      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" />
+      {/* <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" /> */}
       <Footer />
     </div>
   );
