@@ -20,7 +20,7 @@ function App() {
         <Route path="/business" element={<Business />} />
         <Route path='/tech' element={<Tech />} />
       </Routes>
-      {/* <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" /> */}
+      <MessengerCustomerChat pageId="107400511790455" appId="1505620756529166" />
       <Footer />
     </div>
   );
