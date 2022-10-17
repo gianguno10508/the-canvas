@@ -51,7 +51,12 @@
     column-gap: 15px;
 }
 
-.tech-list .tech-paginate .paginationActive {
+.tech-list .tech-paginate .paginationBttns li:hover {
+    transform: scale(1.2);
+    transition: all .3s ease
+}
+
+.tech-list .tech-paginate .paginationBttns .paginationActive a {
     color: red !important;
     font-weight: bold !important;
 }
