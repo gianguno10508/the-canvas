@@ -1,14 +1,21 @@
+.bg-dark-mode-tech {
+    background-color: #111 !important;
+}
+
 .tech-list {
     padding-top: 30px;
     text-align: left;
+    padding-bottom: 30px;
 }
 
 .tech-item {
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .tech-item .embed-responsive-item {
     width: 100%;
+    padding-bottom: 10px;
 }
 
 .tech-item .tech-item-title {
@@ -31,4 +38,40 @@
 .tech-item .tech-item-title:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.tech-list .tech-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tech-list .tech-paginate .paginationBttns {
+    display: flex;
+    list-style-type: none;
+    column-gap: 15px;
+}
+
+.tech-list .tech-paginate .paginationActive {
+    color: red !important;
+    font-weight: bold !important;
+}
+
+.tech-list .tech-paginate i {
+    color: #111 !important;
+}
+
+.tech-list .tech-top h2 {
+    padding-bottom: 30px;
+}
+
+.bg-dark-mode-tech .container h2 {
+    color: #eee;
+}
+
+.bg-dark-mode-tech .tech-item-title {
+    color: #eee !important;
+}
+
+.bg-dark-mode-tech .tech-item-date {
+    color: #F39887 !important;
 }
