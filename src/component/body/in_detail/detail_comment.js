@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import $ from 'jquery';
+// import FacebookLogin from 'react-facebook-login';
 function DetailComment(props){
     const [colorWhite, setColorWhite] = useState(null);
     const [colorEEE, setColorEEE] = useState(null);
@@ -16,7 +16,7 @@ function DetailComment(props){
     }, [props.darkmode]);
     return(
         <div className='detailComments text-start' >
-            <h3 id='comments-title' className={`${colorWhite}`}><span>3</span> Comments</h3>
+            {/* <h3 id='comments-title' className={`${colorWhite}`}><span>3</span> Comments</h3>
             <ol className="commentlist">
                 <li className="comment even thread-even depth-1" id="li-comment-1">
                 <div id="comment-1" className="comment-wrap">
@@ -86,7 +86,8 @@ function DetailComment(props){
                     </div>
                 </li>
             </ol>
-            <div className="clear"></div>          
+            <div className="clear"></div>           */}
+            <div className="fb-comments" data-href="https://www.24h.com.vn/tin-tuc-trong-ngay/chinh-thuc-bao-so-5-hinh-thanh-tren-bien-dong-mien-trung-mua-nhu-trut-nuoc-c46a1405400.html/" data-width="" data-numposts="5"></div>
         </div>
     )
 }
