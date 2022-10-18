@@ -69,7 +69,7 @@ function Detail(props) {
                                     <div className='col-lg-6'>
                                         <DetailTextContent />
                                         <DetailComment />  
-                                        <LeaveCmtDetail />
+                                        {/* <LeaveCmtDetail /> */}
                                     </div>
                                 </div>
                             </div>

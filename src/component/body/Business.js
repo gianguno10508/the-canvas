@@ -47,7 +47,7 @@ function Business(props) {
     //  ++++   
     const [dataBusiness, setDataBusiness] = useState([])
     useEffect(() => {
-        axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=705527c6f7324769b575a76016768a3a')
+        axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=98e67ec21de6409482c6689c5b8a25fb')
             .then((data) => {
                 setDataBusiness(data.data.articles)
             }, [])
