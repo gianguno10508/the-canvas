@@ -8,6 +8,8 @@ import { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { actSelectDarkMode } from "../actions";
 import $ from 'jquery';
+
+import LoginWithGG from '../component/body/login/finallLogin';
 function Header(props) {
     const current = new Date();
     const date = `${current.getDate()}`;
@@ -67,7 +69,6 @@ function Header(props) {
 
     const useOutsideClick = (callback) => {
         const refdr = useRef();
-
         useEffect(() => {
             const handleItemClickDropdown = (event) => {
                 if (refdr.current && !refdr.current.contains(event.target)) {
@@ -91,28 +92,22 @@ function Header(props) {
 
     const useOutsideClickSearch = (callback) => {
         const ref = useRef();
-
         useEffect(() => {
             const handleItemClickSearch = (event) => {
                 if (ref.current && !ref.current.contains(event.target)) {
                     callback();
                 }
             };
-
             document.addEventListener('click', handleItemClickSearch);
-
             return () => {
                 document.removeEventListener('click', handleItemClickSearch);
             };
         }, [ref]);
-
         return ref;
     };
-    //const [searchText, setSearchText] = useState(null);
     const handleClickOutside = () => {
         setShowSearch('disnone');
         setNewShowSearch([]);
-        //setSearchText(null);
     };
     const [showSearch, setShowSearch] = useState('disnone');
     const handleItemClickSearch = (event) => {
@@ -135,6 +130,7 @@ function Header(props) {
             event.stopPropagation();
         }
     };
+    //
     const useOutsideClickMenu = (callback) => {
         const refdrm = useRef();
 
@@ -144,7 +140,6 @@ function Header(props) {
                     callback();
                 }
             };
-
             document.addEventListener('click', handleItemClickMenu);
 
             return () => {
@@ -158,6 +153,7 @@ function Header(props) {
         setShowMenu('disnone');
     };
     const refdrmenu = useOutsideClickMenu(handleClickOutsideMenu);
+
     const handleSearchHeader = (event) => {
         const newShowSearch = [];
         if (event.target.value.length > 0) {
@@ -182,6 +178,38 @@ function Header(props) {
             $(this).addClass('current');
         });
     })
+
+    // +++showLogin+++
+    const [showLogin, setShowLogin] = useState('disnone');
+    const handleItemClickLogin = (event) => {
+        if (showLogin == 'show') {
+            setShowLogin('disnone');
+        } else {
+            setShowLogin('show');
+            event.stopPropagation();
+        }
+    };
+
+    const useClickOutLogin =(callback)=>{
+        const reflogin = useRef();
+        useEffect(() => {
+            const handleItemClickLogin = (event) => {
+                if (reflogin.current &&!reflogin.current.contains(event.target)){
+                    callback();
+                }
+            }
+            document.addEventListener('click', handleItemClickLogin);
+            return () => {
+                document.removeEventListener('click', handleItemClickLogin);
+            };
+        }, [reflogin]);
+        return reflogin;
+    };
+    const handleClickOutsideLogin = () => {
+        setShowLogin('disnone');
+    };
+    const reflogin = useClickOutLogin(handleClickOutsideLogin);
+
     return (
         <header className={`${bgDark} header sticky-top ${border}`}>
             <div className="container">
@@ -254,10 +282,24 @@ function Header(props) {
                             </span>
                         </div>
 
-                        <div className="user-icon">
-                            <span className={`icon-login ${colorWhite}`}>
-                                <i className="fa-solid fa-user"></i>
-                            </span>
+                        <div className="user-icon"  onClick={(event) => handleItemClickLogin(event)}>
+                                <span className={`icon-login ${colorWhite}`}>
+                                    {!Array.isArray(props.dataUserLogin) 
+                                    ?
+                                    (   props.dataUserLogin == null
+                                        ?
+                                        <i className="fa-solid fa-user"></i>
+                                        :
+                                        <img src={props.dataUserLogin.imageUrl} alt='user'/>
+                                    )
+                                    :
+                                    (<i className="fa-solid fa-user"></i>)
+                                    } 
+                                </span>
+                                <div ref={reflogin} className={`${showLogin}`}>
+                                    <LoginWithGG />    
+                                </div>
+                                                     
                         </div>
 
                     </div>
@@ -315,7 +357,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 const mapStateToProps = (state, ownProps) => {
     return {
-        datalifeStyle: state.dataLifeStyle
+        datalifeStyle: state.dataLifeStyle,
+        dataUserLogin: state.dataUserLogin
     };
 };
 

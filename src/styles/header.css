@@ -196,7 +196,9 @@ button:not(:disabled) {
     margin-top: 2px;
     cursor: pointer;
 }
-
+.header .header-misc .user-icon a{
+    color: #111;
+}
 
 .header .header-misc .dark-mode .white-icon,
 .header .header-misc .dark-mode .dark-icon {
@@ -338,7 +340,21 @@ button:not(:disabled) {
 .text_show_result_search p {
     margin-bottom: 0;
 }
-
+/* emailLogin */
+.user-icon{
+    position: relative;
+}
+.finallLogin{
+    position: absolute;
+    top: 35px;
+    left: -237px;
+    /* display: block; */
+    transition: all .3s ease;
+    background-color:#f0f0f0;
+    z-index: 3;
+    padding: 20px 30px;
+    width: 260px;
+}
 @media only screen and (max-width: 1520px) {
     .header .header-misc .top-search .search-box {
         left: -200px;
@@ -405,8 +421,11 @@ button:not(:disabled) {
     .header .header-row{
         flex-flow: column;
     }
+    .finallLogin{
+        left: -185px;
+        top: 200px;
+    }
 }
-
 @media only screen and (max-width:576px) {
     .header .menu {
         margin-top: 0px;
@@ -418,5 +437,10 @@ button:not(:disabled) {
 
     .header .header-misc .top-search .search-box {
         left: -160px;
+    }
+}
+@media only screen and (max-width:390px) {
+    .finallLogin{
+        left: -172px;
     }
 }
