@@ -67,8 +67,14 @@ function Detail(props) {
                                     </div>
                                     <div className='col-lg-1'></div>
                                     <div className='col-lg-6'>
+                                        <div
+                                            className="fb-like" 
+                                            data-href="https://www.nbcnews.com/news/world/uk-prime-minister-liz-truss-resigns-what-happens-now-rcna53260" 
+                                            data-width="100" 
+                                            data-layout="standard" 
+                                            data-action="like" data-size="small" data-share="true">
+                                        </div>                                        
                                         <DetailTextContent />
-                                        dhkl
                                         <DetailComment />  
                                         {/* <LeaveCmtDetail /> */}
                                     </div>
