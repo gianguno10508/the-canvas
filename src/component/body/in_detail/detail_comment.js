@@ -87,7 +87,7 @@ function DetailComment(props){
                 </li>
             </ol>
             <div className="clear"></div>           */}
-            <div className="fb-comments" data-href="https://www.24h.com.vn/tin-tuc-trong-ngay/chinh-thuc-bao-so-5-hinh-thanh-tren-bien-dong-mien-trung-mua-nhu-trut-nuoc-c46a1405400.html/" data-width="" data-numposts="5"></div>
+            <div className="fb-comments" data-href="https://www.nbcnews.com/news/world/uk-prime-minister-liz-truss-resigns-what-happens-now-rcna53260" data-width="" data-numposts="5"></div>
         </div>
     )
 }
