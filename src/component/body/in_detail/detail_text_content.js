@@ -64,6 +64,13 @@ function DetailTextContent(props){
             </div>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. <a href="#">Nullam quis risus eget urna</a> mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <div
+                className="fb-like" 
+                data-href="https://www.nbcnews.com/news/world/uk-prime-minister-liz-truss-resigns-what-happens-now-rcna53260" 
+                data-width="100" 
+                data-layout="standard" 
+                data-action="like" data-size="small" data-share="true">
+            </div>  
             <div className="line"></div>
             <div className="tagcloud">
                 <h4>Related Tags</h4>
