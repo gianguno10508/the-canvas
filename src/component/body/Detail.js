@@ -68,6 +68,7 @@ function Detail(props) {
                                     <div className='col-lg-1'></div>
                                     <div className='col-lg-6'>
                                         <DetailTextContent />
+                                        dhkl
                                         <DetailComment />  
                                         {/* <LeaveCmtDetail /> */}
                                     </div>
