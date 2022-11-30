@@ -9,11 +9,16 @@ import Business from './component/body/Business';
 // import TestFb from './component/TestFb';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Tech from './component/body/Tech';
+import { useEffect } from 'react';
+import { getMenuHeader } from './gql/Query';
 // import Login from './component/body/login/login';
 // import LgTest from './component/body/login/loginTest';
 // import LoginWithGG from './component/body/login/finallLogin';
 
 function App() {
+  useEffect(() => {
+    getMenuHeader().then(res => console.log(res))
+  }, [])
   return (
     <div className="App">
       <Header />
